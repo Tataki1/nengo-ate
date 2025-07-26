@@ -17,8 +17,15 @@ function showQuestion() {
 }
 
 function checkAnswer() {
+  const userAnswer = document.getElementById("answer").value.trim();
   const correct = quiz[current].a;
-  document.getElementById("result").textContent = correct;
+
+  if (userAnswer === correct) {
+    document.getElementById("result").textContent = "✅ 正解！";
+  } else {
+    document.getElementById("result").textContent = correct;
+  }
+
   current = (current + 1) % quiz.length;
   setTimeout(showQuestion, 1500);
 }
