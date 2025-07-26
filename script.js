@@ -23,7 +23,7 @@ function checkAnswer() {
   if (userAnswer === correct) {
     document.getElementById("result").textContent = "✅ 正解！";
   } else {
-    document.getElementById("result").textContent = "❌ 不正解！正解は「" + correct + "」";
+    document.getElementById("result").textContent = correct;
   }
 
   current = (current + 1) % quiz.length;
