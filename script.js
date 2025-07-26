@@ -18,8 +18,7 @@ function showQuestion() {
 
 function checkAnswer() {
   const correct = quiz[current].a;
-    document.getElementById("result").textContent = correct;
-
+  document.getElementById("result").textContent = correct;
   current = (current + 1) % quiz.length;
   setTimeout(showQuestion, 1500);
 }
